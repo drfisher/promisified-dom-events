@@ -4,8 +4,19 @@
   "description": "Creates promises for some standart DOM events",
   "main": "dist/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pavel Rybin <drfisherozersk@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/core-js": "^0.9.41",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1"
+  }
 }

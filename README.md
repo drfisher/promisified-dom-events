@@ -25,7 +25,7 @@ loadedPromise.then(() => {
 window.promisifiedDomEvents.ready.then(() => {
   // DOM is ready
 });
-window.promisifiedDomEvents.ready.then(() => {
+window.promisifiedDomEvents.loaded.then(() => {
   // window is loaded
 });
 

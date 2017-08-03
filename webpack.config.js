@@ -1,5 +1,6 @@
 /* jshint esnext:true, node: true */
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 const config = {
 	devtool: 'source-map',
@@ -7,7 +8,7 @@ const config = {
 		promisifiedDomEvents: './src/promisifiedDomEvents.ts'
 	},
 	output: {
-		filename: './dist/[name].js'
+		filename: './dist/[name].min.js'
 	},
 	resolve: {
 		extensions: ['.ts']
@@ -22,7 +23,10 @@ const config = {
 				]
 			}
 		]
-	}
+	},
+	plugins: [
+		new UglifyJSPlugin()
+	]
 };
 
 module.exports = config;

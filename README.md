@@ -13,11 +13,11 @@ npm install -S promisified-dom-events
 
 ```javascript
 // import
-import {loadedPromise, readyPromise} from 'promisified-dom-events';
-readyPromise.then(() => {
+import {loaded, ready} from 'promisified-dom-events';
+ready.then(() => {
   // DOM is ready
 });
-loadedPromise.then(() => {
+loaded.then(() => {
   // window is loaded
 });
 

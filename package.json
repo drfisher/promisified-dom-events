@@ -26,9 +26,9 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/core-js": "^0.9.41",
-    "ts-loader": "^2.0.3",
-    "typescript": "^2.3.2",
+    "@types/core-js": "^0.9.43",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.6.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^2.5.1"
   }

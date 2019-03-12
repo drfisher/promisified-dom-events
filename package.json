@@ -4,9 +4,8 @@
   "description": "Creates promises for some standart DOM events",
   "main": "dist/promisifiedDomEvents.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
-    "compile": "./node_modules/.bin/tsc",
-    "prepublishOnly": "npm run compile && npm run build",
+    "compile": "tsc && webpack",
+    "prepublishOnly": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pavel Rybin <drfisherozersk@gmail.com>",
@@ -26,10 +25,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/core-js": "^0.9.43",
-    "ts-loader": "^2.3.7",
-    "typescript": "^2.6.2",
+    "@types/core-js": "^2.5.0",
+    "typescript": "^3.3.3333",
     "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^2.5.1"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
   }
 }

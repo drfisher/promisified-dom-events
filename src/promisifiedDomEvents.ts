@@ -1,7 +1,11 @@
 const EVENT_DOM_READY:string = 'DOMContentLoaded';
 const EVENT_WINDOW_LOADED:string = 'load';
 
-export const ready:Promise<any> = new Promise((resolve):void => {
+export const ready:Promise<any> = new Promise((resolve, reject):void => {
+	if (typeof window === "undefined") {
+		reject();
+	}
+
 	const {readyState} = window.document;
 
 	if (readyState === 'loading') {
@@ -15,7 +19,11 @@ export const ready:Promise<any> = new Promise((resolve):void => {
 	}
 });
 
-export const loaded:Promise<any> = new Promise((resolve):void => {
+export const loaded:Promise<any> = new Promise((resolve, reject):void => {
+	if (typeof window === "undefined") {
+		reject();
+	}
+
 	const {readyState} = window.document;
 
 	if (readyState !== 'complete') {
@@ -29,4 +37,6 @@ export const loaded:Promise<any> = new Promise((resolve):void => {
 	}
 });
 
-window['promisifiedDomEvents'] = {ready, loaded};
+if (typeof window !== "undefined") {
+	window['promisifiedDomEvents'] = {ready, loaded};
+}

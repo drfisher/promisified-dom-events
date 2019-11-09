@@ -19,5 +19,8 @@
 	},
 	"exclude": [
 		"node_modules"
+	],
+	"files": [
+		"./src/promisifiedDomEvents.ts"
 	]
 }

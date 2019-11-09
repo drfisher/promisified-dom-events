@@ -5,7 +5,7 @@
   "main": "dist/promisifiedDomEvents.js",
   "scripts": {
     "compile": "webpack",
-    "prepublishOnly": "npm run compile",
+    "prepublishOnly": "npm test && npm run compile",
     "test": "mocha-headless-chrome -f ./tests/index.html"
   },
   "author": "Pavel Rybin <drfisherozersk@gmail.com>",

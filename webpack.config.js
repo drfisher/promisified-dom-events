@@ -1,15 +1,22 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const path = require('path');
 
 module.exports = {
+	entry: './src/promisifiedDomEvents.ts',
 	mode: 'production',
-	devtool: 'source-map',
-	entry: {
-		promisifiedDomEvents: './dist/promisifiedDomEvents.js'
+	module: {
+		rules: [
+			{
+				test: /\.ts?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
+			},
+		],
+	},
+	resolve: {
+		extensions: ['.ts', '.js'],
 	},
 	output: {
-		filename: '[name].min.js'
+		filename: 'promisifiedDomEvents.min.js',
+		path: path.resolve(__dirname, 'dist'),
 	},
-	plugins: [
-		new UglifyJSPlugin()
-	]
 };

@@ -4,9 +4,9 @@
   "description": "Creates promises for some standart DOM events",
   "main": "dist/promisifiedDomEvents.js",
   "scripts": {
-    "compile": "tsc && webpack",
+    "compile": "webpack",
     "prepublishOnly": "npm run compile",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha-headless-chrome -f ./tests/index.html"
   },
   "author": "Pavel Rybin <drfisherozersk@gmail.com>",
   "repository": {
@@ -25,10 +25,13 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/core-js": "^2.5.0",
-    "typescript": "^3.3.3333",
-    "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "@types/core-js": "^2.5.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "mocha-headless-chrome": "^2.0.3",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

@@ -1,17 +1,15 @@
 {
-	"compileOnSave": false,
 	"compilerOptions": {
 		"declaration": true,
 		"diagnostics": true,
-		"experimentalDecorators": true,
-		"module": "commonjs",
+		"module": "es6",
 		"moduleResolution": "node",
 		"noUnusedLocals": true,
-		"noUnusedParameters": false,
-		"outDir": "./dist",
+		"noUnusedParameters": true,
+		"outDir": "./dist/",
 		"removeComments": true,
 		"skipLibCheck": true,
-		"sourceMap": true,
+		"sourceMap": false,
 		"strictNullChecks": true,
 		"target": "es5",
 		"lib": [
@@ -19,9 +17,6 @@
 			"dom"
 		]
 	},
-	"files": [
-		"src/promisifiedDomEvents.ts"
-	],
 	"exclude": [
 		"node_modules"
 	]

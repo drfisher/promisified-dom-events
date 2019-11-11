@@ -2,9 +2,9 @@
   "name": "promisified-dom-events",
   "version": "2.2.1",
   "description": "Creates promises for some standart DOM events",
-  "main": "dist/promisifiedDomEvents.min.js",
+  "main": "dist/promisifiedDomEvents.js",
   "scripts": {
-    "compile": "webpack",
+    "compile": "tsc && webpack",
     "prepublishOnly": "npm test && npm run compile",
     "test": "mocha-headless-chrome -f ./tests/index.html"
   },

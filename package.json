@@ -1,6 +1,6 @@
 {
   "name": "promisified-dom-events",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Creates promises for some standart DOM events",
   "main": "dist/promisifiedDomEvents.min.js",
   "scripts": {

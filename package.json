@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/core-js": "^2.5.2",
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mocha-headless-chrome": "^2.0.3",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
